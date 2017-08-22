@@ -1,0 +1,714 @@
+########################################################################################################################
+# File structure                                                                                                       #
+# ex. page.lander.zip_container.zip_code_button                                                                        #
+# Breakdown:                                                                                                           #
+# Page: indicator that the object is part of a page                                                                    #
+#   lander: Name of the page                                                                                           #
+#     zip_container: which component is the element in                                                                 #
+#       zip_code_button: actual element including it's attributes.                                                     #
+#                                                                                                                      #
+# The element object contains the locator, dom paths and expected attributes.                                          #
+#                                                                                                                      #
+# Element locator:                                                                                                     #
+#   locator_type: xpath, css, id, name, etc                                                                            #
+#   locator: actual path to the dom element, ideally a data-testid                                                     #
+#                                                                                                                      #
+# element attributes:                                                                                                  #
+#   text: default text for an element                                                                                  #
+#   placeholder: default placeholder text                                                                              #
+#   color:                                                                                                             #
+#     type: what css the farmwork should inspect to determine the color, e.g, background, background-color, etc.       #
+#     color-id: actual hex id of the color                                                                             #
+#                                                                                                                      #
+# Full Element structure:                                                                                              #
+#   page:                                                                                                              #
+#     page-name:                                                                                                       #
+#       component-name:                                                                                                #
+#         element-name:                                                                                                #
+#           element-locator                                                                                            #
+#             type                                                                                                     #
+#             path                                                                                                     #
+#           element-attributes                                                                                         #
+#             attributes                                                                                               #
+#             color                                                                                                    #
+#                                                                                                                      #
+#                                                                                                                      #
+# Note: If a component is a global property, for example, the footer or header,                                        #
+# the component will be located under the 'global' page                                                                #
+#                                                                                                                      #
+# Example:                                                                                                             #
+#   page:                                                                                                              #
+#     global                                                                                                           #
+#      header: (global component)                                                                                      #
+#        element                                                                                                       #
+#        ...                                                                                                           #
+#                               `                                                                                       #
+#                                                                                                                      #
+# This can be visualized within a page object. The "LanderPage" will include multiple components, such as              #
+# Footer, Header, ZipContainerComponent, etc.                                                                          #
+#                                                                                                                      #
+# This allows for misc sites to update individual components based on the sites.                                       #
+#                                                                                                                      #
+#        ##################################################################################################            #
+#        #   NOTE: GENERAL.YML is a global config, it's actually targeting healthplans.com as a baseline  #            #
+#        ##################################################################################################            #
+#                                                                                                                      #
+########################################################################################################################
+
+
+#Working example of the breakdown from the huge comment above.
+
+########
+# PAGE #
+########
+page:
+    #############
+    # PAGE NAME #
+    #############
+    lander:
+        ##################
+        # Component Name #
+        ##################
+        c_ZipContainer: #Component
+
+            ################
+            # Element Name #
+            ################
+            zc_ZipButton: #Element
+                ############
+                # Locator #
+                ############
+                locator:
+                    locator_type: "xpath"
+                    locator_path: "//*[@data-testid='zc_ZipButton']"
+                ##############
+                # Attributes #
+                ##############
+                attributes:
+                    text: "Shop Plans »"
+                    color:
+                        type: "background-color"
+                        color-id: "#b34787"
+            zc_ZipInput:
+                locator:
+                    locator_type: "xpath"
+                    locator_path: "//*[@data-testid='zc_ZipInput']"
+                attributes:
+                    placeholder: "Enter Your ZipCode"
+
+            zc_CardImage:
+                locator:
+                    locator_type: "xpath"
+                    locator_path: "//*[@data-testid='zc_CardImage']"
+                attributes:
+                    imgSrc: "/dreamplans/img/home/girl.jpg"
+
+            zc_CardSubTitle:
+                locator:
+                    locator_type: "xpath"
+                    locator_path: "//*[@data-testid='zc_CardSubTitle']"
+                attributes:
+                    placeholder: "Rates as low as $50/month in"
+
+            zc_CardTitle:
+                locator:
+                    locator_type: "xpath"
+                    locator_path: "//*[@data-testid='zc_CardTitle']"
+                attributes:
+                    text: "Health Insurance Smarter"
+
+            zc_LabelImage:
+                locator:
+                    locator_type: "xpath"
+                    locator_path: "//*[@data-testid='zc_LabelImage']"
+
+            zc_LabelImageSm:
+                locator:
+                    locator_type: "xpath"
+                    locator_path: "//*[@data-testid='zc_LabelImageSm']"
+
+            zc_LocationIcon:
+                locator:
+                    locator_type: "xpath"
+                    locator_path: "//*[@data-testid='zc_LocationIcon']"
+
+        ############
+        # CARRIERS #
+        ############
+        c_Carriers:
+            cc_Title:
+                locator:
+                    locator_type: "xpath"
+                    locator_path: "//*[@data-testid='cc_Title']"
+                attributes:
+                    text: "Available Health Plans in"
+            cc_availableCarriers:
+                locator:
+                    locator_type: "xpath"
+                    locator_path: "//*[@data-testid='cc_availableCarriers']"
+
+        c_ChooseConfidence:
+            confidence_Title:
+                locator:
+                    locator_type: "xpath"
+                    locator_path: "//*[@data-testid='confidence_Title']"
+                attributes:
+                    text: "Choose with Confidence"
+
+            confidence_SubTitle:
+                locator:
+                    locator_type: "xpath"
+                    locator_path: "//*[@data-testid='confidence_SubTitle']"
+                attributes:
+                    text: "Health insurance is complicated. We're here to guide you through it."
+
+            confidence_StepOneImage:
+                locator:
+                    locator_type: "xpath"
+                    locator_path: "//*[@data-testid='confidence_StepOneImage']"
+                attributes:
+                    text: "Health insurance is complicated. We're here to guide you through it."
+
+            confidence_StepOneTitle:
+                locator:
+                    locator_type: "xpath"
+                    locator_path: "//*[@data-testid='confidence_StepOneTitle']"
+                attributes:
+                    text: "Step 1:"
+
+            confidence_StepOneDesc:
+                locator:
+                    locator_type: "xpath"
+                    locator_path: "//*[@data-testid='confidence_StepOneDesc']"
+                attributes:
+                    text: "Tell us a little about yourself"
+
+
+            confidence_StepTwoImage:
+                locator:
+                    locator_type: "xpath"
+                    locator_path: "//*[@data-testid='confidence_StepTwoImage']"
+                attributes:
+                    imgSrc: "/dreamplans/img/home/step02.png"
+
+            confidence_StepTwoTitle:
+                locator:
+                    locator_type: "xpath"
+                    locator_path: "//*[@data-testid='confidence_StepTwoTitle']"
+                attributes:
+                    text: "Step 2:"
+
+            confidence_StepTwoDesc:
+                locator:
+                    locator_type: "xpath"
+                    locator_path: "//*[@data-testid='confidence_StepTwoDesc']"
+                attributes:
+                    text: "View & compare plans"
+
+            confidence_StepThreeImage:
+                locator:
+                    locator_type: "xpath"
+                    locator_path: "//*[@data-testid='confidence_StepThreeImage']"
+                attributes:
+                    imgSrc: "/dreamplans/img/home/step03.png"
+
+            confidence_StepThreeTitle:
+                locator:
+                    locator_type: "xpath"
+                    locator_path: "//*[@data-testid='confidence_StepThreeTitle']"
+                attributes:
+                    text: "Step 3:"
+
+            confidence_StepThreeDesc:
+                locator:
+                    locator_type: "xpath"
+                    locator_path: "//*[@data-testid='confidence_StepThreeDesc']"
+                attributes:
+                    text: "Get covered!"
+
+            confidence_ZipLocation:
+                locator:
+                    locator_type: "xpath"
+                    locator_path: "//*[@data-testid='confidence_StepThreeDesc']"
+                attributes:
+                    text: "Get covered!"
+
+            confidence_ZipInput:
+                locator:
+                    locator_type: "xpath"
+                    locator_path: "//*[@data-testid='confidence_ZipInput']"
+                attributes:
+                    placeholder: "Enter Your Zip"
+
+            confidence_ZipButton:
+                locator:
+                    locator_type: "xpath"
+                    locator_path: "//*[@data-testid='confidence_ZipButton']"
+                attributes:
+                    text: "View Plans & Prices"
+
+        c_SmartChoice:
+
+            sc_Title:
+                locator:
+                    locator_type: "xpath"
+                    locator_path: "//*[@data-testid='sc_Title']"
+                attributes:
+                    text: "Make a Smart Choice: Use Our Plan Finder!"
+
+            sc_SubTitle:
+                locator:
+                    locator_type: "xpath"
+                    locator_path: "//*[@data-testid='sc_SubTitle']"
+                attributes:
+                    text: "Leave the work to us. Tell us about how you'll use your insurance and we'll find you a plan you can hoot about."
+
+            sc_Image:
+                locator:
+                    locator_type: "xpath"
+                    locator_path: "//*[@data-testid='sc_Image']"
+                attributes:
+                    imgSrc: "/dreamplans/img/home/plans.png"
+        c_LearnMore:
+            lm_Title:
+                locator:
+                    locator_type: "xpath"
+                    locator_path: "//*[@data-testid='lm_Title']"
+                attributes:
+                    text: "Learn More About Health Insurance"
+
+            lm_TitleImg:
+                locator:
+                    locator_type: "xpath"
+                    locator_path: "//*[@data-testid='lm_TitleImg']"
+                attributes:
+                    img_src: "/dreamplans/img/home/learnmore.png"
+
+
+
+            lm_BasicsLink:
+                locator:
+                    locator_type: "xpath"
+                    locator_path: "//*[@data-testid='lm_BasicsLink']"
+                attributes:
+                    link: "/library/healthinsurance/basics"
+
+            lm_BasicsIcon:
+                locator:
+                    locator_type: "xpath"
+                    locator_path: "//*[@data-testid='lm_BasicsIcon']"
+
+            lm_BasicsTitle:
+                locator:
+                    locator_type: "xpath"
+                    locator_path: "//*[@data-testid='lm_BasicsTitle']"
+                attributes:
+                    text: "Insurance Basics"
+
+          lm_DiscountLink:
+                locator:
+                    locator_type: "xpath"
+                    locator_path: "//*[@data-testid='lm_DiscountLink']"
+                attributes:
+                    link: "/library/obamacare/government-discounts"
+            lm_DiscountIcon:
+                locator:
+                    locator_type: "xpath"
+                    locator_path: "//*[@data-testid='lm_BasicsIcon']"
+                attributes:
+                    link: "/library/healthinsurance/basics"
+            lm_DiscountTitle:
+                locator:
+                    locator_type: "xpath"
+                    locator_path: "//*[@data-testid='lm_BasicsIcon']"
+                attributes:
+                    link: "/library/healthinsurance/basics"
+
+
+
+            lm_GovernmentLink:
+                locator:
+                    locator_type: "xpath"
+                    locator_path: "//*[@data-testid='lm_BasicsIcon']"
+                attributes:
+                    link: "/library/healthinsurance/basics"
+            lm_GovernmentIcon:
+                locator:
+                    locator_type: "xpath"
+                    locator_path: "//*[@data-testid='lm_BasicsIcon']"
+                attributes:
+                    link: "/library/healthinsurance/basics"
+            lm_GovernmentTitle:
+                locator:
+                    locator_type: "xpath"
+                    locator_path: "//*[@data-testid='lm_BasicsIcon']"
+                attributes:
+                    link: "/library/healthinsurance/basics"
+            lm_MedicareLink:
+                locator:
+                    locator_type: "xpath"
+                    locator_path: "//*[@data-testid='lm_BasicsIcon']"
+                attributes:
+                    link: "/library/healthinsurance/basics"
+            lm_MedicareIcon:
+                locator:
+                    locator_type: "xpath"
+                    locator_path: "//*[@data-testid='lm_BasicsIcon']"
+                attributes:
+                    link: "/library/healthinsurance/basics"
+            lm_MedicareTitle:
+                locator:
+                    locator_type: "xpath"
+                    locator_path: "//*[@data-testid='lm_BasicsIcon']"
+                attributes:
+                    link: "/library/healthinsurance/basics"
+
+####################################
+#              #FAS#               #
+####################################
+  fas:
+    filter:
+      filter_button:
+        locator:
+          locator_type: "xpath"
+          locator_path: "//*[@data-testid='filterNavHover']"
+        text: "Filter"
+      provider_type:
+        locator:
+          locator_type: "xpath"
+          locator_path: "//label[@data-testid='filterProviderTypeLabel']"
+        text: "Provider Type"
+    fas_header:
+        fas_title:
+        fas_sub_title:
+
+
+
+
+#####################################
+#              #FORM#               #
+#####################################
+
+  form:
+    ##############
+    #  BIO FORM  #
+    ##############
+    biographical_form:
+      birth_date_label:
+        locator:
+          locator_type: "xpath"
+          locator_path: "//label[@data-testid='funnelBirthDateLabel']"
+        text: "Birth Date"
+
+      birth_date_month:
+        locator:
+          locator_type: "xpath"
+          locator_path: "//input[@data-testid='applicant_dob_mm']"
+        text:
+        placeholder: "MM"
+
+      birth_date_day:
+        locator:
+          locator_type: "xpath"
+          locator_path: "//input[@data-testid='applicant_dob_dd']"
+        text:
+        placeholder: "DD"
+
+      birth_date_year:
+        locator:
+          locator_type: "xpath"
+          locator_path: "//input[@data-testid='applicant_dob_yyyy']"
+        text:
+        placeholder: "YYYY"
+
+      gender_male:
+        locator:
+          locator_type: "xpath"
+          locator_path: "//label[@data-testid='funnelGenderMaleRadio']"
+        text: "Male"
+
+      gender_female:
+        locator:
+          locator_type: "xpath"
+          locator_path: "//label[@data-testid='funnelGenderFemaleRadio']"
+        text: "Female"
+
+      tobacco_yes:
+        locator:
+          locator_type: "xpath"
+          locator_path: "//label[@data-testid='funnelTobaccoYesRadio']"
+        text: "Yes"
+
+      tobacco_no:
+        locator:
+          locator_type: "xpath"
+          locator_path: "//label[@data-testid='funnelTobaccoNoRadio']"
+        text: "No"
+
+      adopting_yes:
+        locator:
+          locator_type: "id"
+          locator_path: "applicant_pregnant_adopt_yes"
+        text: "Yes"
+
+      adopting_no:
+        locator:
+          locator_type: "id"
+          locator_path: "applicant_pregnant_adopt_no"
+        text: "No"
+
+      applicant_health_y:
+        locator:
+          locator_type: "id"
+          locator_path: "applicant_health_y"
+        text: "Yes"
+
+      applicant_health_n:
+        locator:
+          locator_type: "id"
+          locator_path: "applicant_health_y"
+        text: "No"
+
+      next_button_step_1:
+        locator:
+          locator_type: "xpath"
+          locator_path: ".//div[contains(@data-step,'1')]//*[contains(@data-testid, 'nextButton')]"
+        text: "Next »"
+
+      back_button_step_1:
+        locator:
+          locator_type: "xpath"
+          locator_path: ".//div[contains(@data-step,'1')]//*[contains(@data-testid, 'backButton')]"
+        text: ""
+
+    ##############
+    #  QLE FORM  #
+    ##############
+    qle_form:
+      qle_none_apply:
+        locator:
+          locator_type: "id"
+          locator_path: "qle_none_apply"
+        text: "None apply. Get coverage anyway."
+
+      qle_lost_coverage:
+        locator:
+          locator_type: "id"
+          locator_path: "qle_lost_coverage"
+        text: "Lost Coverage"
+
+      qle_got_married:
+        locator:
+          locator_type: "id"
+          locator_path: "qle_got_married"
+        text: "Marriage"
+
+      qle_new_job:
+        locator:
+          locator_type: "id"
+          locator_path: "qle_new_job"
+        text: "New Job"
+
+      qle_had_baby:
+        locator:
+          locator_type: "id"
+          locator_path: "qle_had_baby"
+        text: "New Child"
+
+      qle_moved_another_state:
+        locator:
+          locator_type: "id"
+          locator_path: "qle_moved_another_state"
+        text: "Moved States"
+
+      qle_got_divorced:
+        locator:
+          locator_type: "id"
+          locator_path: "qle_got_divorced"
+        text: "Divorce"
+
+      qle_lost_job:
+        locator:
+          locator_type: "id"
+          locator_path: "qle_lost_job"
+        text: "Lost Job"
+
+      qle_member_family_died:
+        locator:
+          locator_type: "id"
+          locator_path: "qle_member_family_died"
+        text: "Death in Family"
+
+      qle_event_date_mm:
+        locator:
+          locator_type: "id"
+          locator_path: "date_qle_mm"
+        placeholder: "MM"
+
+      qle_event_date_dd:
+        locator:
+          locator_type: "id"
+          locator_path: "date_qle_dd"
+        placeholder: "dd"
+
+      qle_event_date_yyyy:
+        locator:
+          locator_type: "id"
+          locator_path: "date_qle_yyyy"
+        placeholder: "YYY"
+
+      next_button_see_rates:
+        locator:
+          locator_type: "xpath"
+          locator_path: ".//div[contains(@data-step,'2')]//button[@data-testid='seeRates']"
+
+    ##############
+    #
+    ##############
+
+
+#######################################
+#         #Thank You Page#            #
+#######################################
+    typ:
+        filter:
+        compare:
+
+        brand_listing:
+        get_quotes_button:
+            locator:
+                locator_type: "xpath"
+                locator_path: "//button[@data-testid='getQuotesButton_0']"
+            text: "Get Quotes »"
+            attributes:
+                border-bottom: "#883567"
+                background-color: "#b34787"
+
+#######################################
+#         #Global Header#             #
+#######################################
+
+    global_header:
+        c_global_header:
+            gh_headerLogo:
+                locator:
+                    locator_type: "xpath"
+                    locator_path: "//img[@data-testid='gh_headerLogo']"
+
+            gh_headerPhoneContainer:
+                locator:
+                    locator_type: "xpath"
+                    locator_path: "//*[@data-testid='gh_headerPhoneContainer']"
+
+            gh_PhoneNumber:
+                locator:
+                    locator_type: "xpath"
+                    locator_path: "//*[@data-testid='gh_PhoneNumber']"
+
+            gh_PhoneIcon:
+                locator:
+                    locator_type: "xpath"
+                    locator_path: "//*[@data-testid='gh_PhoneIcon']"
+
+            gh_PhoneEarIcon:
+                locator:
+                    locator_path_type: "xpath"
+                    locator_path: "//*[@data-testid='gh_PhoneEarIcon']"
+
+            gh_PhoneLinkNoEar:
+                locator:
+                    locator_path_type: "xpath"
+                    locator_path: "//*[@data-testid='gh_PhoneLinkNoEar']"
+
+            gh_PhoneLinkWithEar:
+                locator:
+                    locator_path_type: "xpath"
+                    locator_path: "//*[@data-testid='gh_PhoneLinkWithEar']"
+
+            gh_TalkToAgent:
+                locator:
+                    locator_path_type: "xpath"
+                    locator_path: "//*[@data-testid='gh_TalkToAgent']"
+                text: "Talk to an agent"
+
+#######################################
+#         #Global Footer#             #
+#######################################
+    global_footer:
+        c_GlobalFooter_Bottom:
+            gf_CopyRight:
+                locator:
+                    locator_path_type: "xpath"
+                    locator_path: "//*[@data-testid='gh_TalkToAgent']"
+                text: "Healthplans.com, all rights reserved."
+            gf_AboutUs:
+                locator:
+                    locator_path_type: "xpath"
+                    locator_path: "//*[@data-testid='gh_TalkToAgent']"
+                text: "About"
+            gf_Contact:
+                locator:
+                    locator_path_type: "xpath"
+                    locator_path: "//*[@data-testid='gh_TalkToAgent']"
+                text: "Contact"
+            gf_TermsOfUse:
+                locator:
+                    locator_path_type: "xpath"
+                    locator_path: "//*[@data-testid='gh_TalkToAgent']"
+                text: "Terms of Use"
+            gf_PrivacyPolicy:
+                locator:
+                    locator_path_type: "xpath"
+                    locator_path: "//*[@data-testid='gh_TalkToAgent']"
+                text: "Privacy Policy"
+
+        c_GlobalFooter_Top:
+            gf_Title:
+                locator:
+                    locator_path_type: "xpath"
+                    locator_path: "??"
+                attributes:
+                    text: "Need help booking online?"
+
+            gf_PhoneNumber:
+                locator:
+                    locator_path_type: "xpath"
+                    locator_path: "//*[@data-testid='gf_PhoneNumber']"
+                attributes:
+                    text: "(855) 881-2218"
+
+            gf_ContactLink:
+                locator:
+                    locator_path_type: "xpath"
+                    locator_path: "//*[@data-testid='gf_ContactLink']"
+                attributes:
+                    text: "CONTACT"
+                    color:
+                        color-type: "color"
+                        color: "#555555"
+
+            gf_AboutLink:
+                locator:
+                    locator_path_type: "xpath"
+                    locator_path: "//*[@data-testid='gf_AboutLink']"
+                attributes:
+                    text: "ABOUT"
+                    color:
+                        color-type: "color"
+                        color: "#555555"
+
+            gf_ShopLink:
+                locator:
+                    locator_path_type: "xpath"
+                    locator_path: "//*[@data-testid='gf_ShopLink']"
+                attributes:
+                    text: "SHOP"
+                    color:
+                        color-type: "color"
+                        color: "#555555"
+            gf_Title:
+                locator:
+                    locator_path_type: "xpath"
+                    locator_path: "//*[@data-testid='gf_Title']"
+                attributes:
+                    text: "Need help booking online?"
