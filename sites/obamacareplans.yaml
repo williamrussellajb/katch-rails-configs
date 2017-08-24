@@ -1,0 +1,32 @@
+#https://obamacareplans.com/
+page:
+ 	lander:
+        headercontainer:
+            logo:
+                locator:
+                    locator_type: "xpath"
+                    locator_path: "//div[@class='logo']"
+                attributes:
+                    alt: "ObamacarePlans.com - Know your options."
+
+ 		storyCard--heroLander:
+			shopStoryCardTitle: 
+        		locator:
+          			locator_type: "xpath"
+          			locator_path: "//*[@data-testid='shopStoryCardTitle']"
+                attributes:
+	        		text: "Compare Affordable Health Options in your state!"
+                
+            storyCardSubTitle:
+                    locator:
+                        locator_type: "xpath"
+                        locator_path: "//*[@data-testid='storyCardSubTitle']"
+                    attributes:
+                        placeholder: "Enter Zip Code"
+
+    		shopStoryCardTitle:
+                locator:
+                    locator_type: "xpath"
+                    locator_path: "//*[@data-testid='shopStoryCardTitle']"
+                attributes:
+                    placeholder: "Start Comparing Your Health Care Options Now"
