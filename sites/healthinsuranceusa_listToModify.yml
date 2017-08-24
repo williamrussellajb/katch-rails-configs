@@ -1,0 +1,202 @@
+            storyCard--globalFeature globalFeature:
+            	storyCard--global__featurerates:
+                    locator:
+                        locator_type: "xpath"
+                        locator_path: "//*[@id='storyCard--global__featurerates']"
+                    attributes:
+                        text: "Rates as Low as "
+
+                storyCard--global__featurecompare:
+                    locator:
+                        locator_type: "xpath"
+                        locator_path: "//*[@id='storyCard--global__featurecompare']"
+                    attributes:
+                        text: "Compare in Minutes"
+
+                storyCard--global__featurecarriers:
+                    locator:
+                        locator_type: "xpath"
+                        locator_path: "//*[@id='storyCard--global__featurecarriers']"
+                    attributes:
+                        text: "Top Carriers & Brokers"
+
+                storyCard--global__featurecompare:
+                    locator:
+                        locator_type: "xpath"
+                        locator_path: "//*[@id='storyCard--global__featuresafe']"
+                    attributes:
+                        text: "100% Safe & Secure"
+
+            storyCard--sem:
+                storyCard__Covered--content:
+                    locator:
+                        locator_type: "xpath"
+                        locator_path: "//section[@class='storyCard storyCard__Covered storyCard--sem']//h2[contains(@class,'storyCard__title storyCard__title--bold')]"
+                    attributes:
+                        text: "Health Insurance Can Be Complicated"
+
+            storyCard__qualify:
+                smartChoiceSubTitle:
+                    locator:
+                        locator_type: "xpath"
+                        locator_path: "(//section[@class='storyCard storyCard__qualify']//*[@data-testid='smartChoiceSubTitle']/a)[1]"
+                    attributes:
+                        text: "Open Enrollment."
+
+            smartChoiceSubTitle:
+                    locator:
+                        locator_type: "xpath"
+                        locator_path: "(//section[@class='storyCard storyCard__qualify']//*[@data-testid='smartChoiceSubTitle']/a)[2]"
+                    attributes:
+                        text: "Learn More."
+
+                hp-icon-capital:
+                    locator:
+                        locator_type: "xpath"
+                        locator_path: "//div[contains(@class,'active')]//span[contains(@class,'hp-icon-capital')]"
+                    attributes:
+                        text: "ACA"
+                hp-icon-clock:
+                    locator:
+                        locator_type: "xpath"
+                        locator_path: "//div[contains(@class,'active')]//span[contains(@class,'hp-icon-clock')]"
+                    attributes:
+                        text: "Short-term"
+
+                hp-icon-accident:
+                    locator:
+                        locator_type: "xpath"
+                        locator_path: "//div[contains(@class,'active')]//span[contains(@class,'hp-icon-accident')]"
+                    attributes:
+                        text: "Accident"
+
+                hp-icon-other:
+                    locator:
+                        locator_type: "xpath"
+                        locator_path: "//div[contains(@class,'active')]//span[contains(@class,'hp-icon-other')]"
+                    attributes:
+                        text: "Critical Illness"
+
+                hp-icon-money:
+                    locator:
+                        locator_type: "xpath"
+                        locator_path: "//div[contains(@class,'active')]//span[contains(@class,'hp-icon-money')]"
+                    attributes:
+                        text: "Fixed Indemnity"
+
+            storyCard--sem:
+                storyCard--sem:
+                    locator:
+                        locator_type: "xpath"
+                        locator_path: "//section[@class='storyCard storyCard__aca storyCard--sem']//*[@data-testid='smartChoiceSubTitle']"
+                    attributes:
+                        text: "Unfortunately, there are a lot of unknowns surrounding health insurance..."
+
+            storyCard__whyChoose:
+                storyCard__contentHolder:
+                    locator:
+                        locator_type: "xpath"
+                        locator_path: "//section[@class='storyCard storyCard__whyChoose']//div[@class='storyCard__contentHolder']/h2"
+                    attributes:
+                        text: "Why Choose HealthInsuranceUSA.org"
+
+                storyCard__whyChoose--text:
+                    locator:
+                        locator_type: "xpath"
+                        locator_path: "//section[@class='storyCard storyCard__whyChoose']//p[@class='storyCard__whyChoose--text']/a"
+                    attributes:
+                        text: "not the government"
+
+            storyCard--footerZip:
+                startSearchingTitle:
+                    locator:
+                        locator_type: "xpath"
+                        locator_path: "//section[@class='storyCard storyCard--light storyCard--footerZip']//*[@data-testid='startSearchingTitle']"
+                    attributes:
+                        text: "Find an Affordable Plan Now!"
+
+            global_footer:
+                c_GlobalFooter_Bottom:
+                    title-addres-footer:
+                        locator:
+                            locator_path_type: "xpath"
+                            locator_path: "//*[@class='title-addres-footer']"
+                        text: "HealthInsuranceUSA.org"
+
+                    title-email-footer:
+                        locator:
+                            locator_path_type: "xpath"
+                            locator_path: "//*[@class='title-email-footer']"
+                        text: "info@HealthInsuranceUSA.org"
+
+                    footer-copy-title:
+                        locator:
+                            locator_path_type: "xpath"
+                            locator_path: "//*[@id='footer-copy']/h3"
+                        text: "* Disclaimers and Important Information:"
+
+                    footer-copy-content-1:
+                        locator:
+                            locator_path_type: "xpath"
+                            locator_path: "(//*[@id='footer-copy']/p)[1]"
+                        text: "HealthInsuranceUSA.org is an independent marketplace and is not a federal or state Marketplace"
+
+                    footer-copy-content-2:
+                        locator:
+                            locator_path_type: "xpath"
+                            locator_path: "(//*[@id='footer-copy']/p)[2]"
+                        text: "This website may not display all data on Qualified Health Plans being offered in your state"
+
+                    footer-copy-advertised-title:
+                        locator:
+                            locator_path_type: "xpath"
+                            locator_path: "//*[@id='footer-copy']/h4"
+                        text: "Advertised Pricing:"
+
+                    footer-copy-advertised-content-1:
+                        locator:
+                            locator_path_type: "xpath"
+                            locator_path: "(//*[@id='footer-copy']/p)[3]"
+                        text: "There are several factors that impact your monthly premium; including, but not limited to your age"
+
+                    footer-copy-advertised-content-2:
+                        locator:
+                            locator_path_type: "xpath"
+                            locator_path: "(//*[@id='footer-copy']/p)[4]"
+                        text: "The advertised price may not be typical. It was generated using the Kaiser Family Foundation"
+
+                    footer-copy-advertised-subsidy:
+                        locator:
+                            locator_path_type: "xpath"
+                            locator_path: "//*[@id='footer-copy']/p/a"
+                        text: "subsidy calculator"
+
+                copyright:
+                    copyright-text:
+                        locator:
+                            locator_path_type: "xpath"
+                            locator_path: "//*[@id='copyright-text']"
+                        attributes:
+                            text: "Copyright © 2014 - 2017 HealthInsuranceUSA.org, all rights reserved."
+
+                    privacyPolicy:
+                        locator:
+                            locator_path_type: "xpath"
+                            locator_path: "//*[@id='links']/a"
+                        attributes:
+                            text: "Privacy Policy"
+
+                    termsOfUse:
+                        locator:
+                            locator_path_type: "xpath"
+                            locator_path: "(//*[@id='links']/a)[2]"
+                        attributes:
+                            text: "Terms of Use"
+
+                    contactUs:
+                        locator:
+                            locator_path_type: "xpath"
+                            locator_path: "(//*[@id='links']/a)[3]"
+                        attributes:
+                            text: "Contact Us"
+                            
