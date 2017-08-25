@@ -1,0 +1,298 @@
+#https://obamacareplans.com/
+page:
+ 	lander:
+        headercontainer:
+            logo:
+                locator:
+                    locator_type: "xpath"
+                    locator_path: "//div[@class='logo']"
+                attributes:
+                    alt: "ObamacarePlans.com - Know your options."
+#comment:
+#need put the correct "data-testid" for testing 
+#=====================================================
+
+			storyCard--globalFeature__Featureitem: 
+                locator:
+                    locator_type: "xpath"
+                    locator_path: "(//section[contains(@class,'storyCard--globalFeature')]//div[@id='storyCard--global__featurerates'])[1]"
+                attributes:
+                    id: "storyCard--global__featurerates"
+#comment:
+#need put the correct "data-testid" for testing 
+#=====================================================
+
+			storyCard--global__featurecompare: 
+                locator:
+                    locator_type: "xpath"
+                    locator_path: "(//section[contains(@class,'storyCard--globalFeature')]//div[@id='storyCard--global__featurecompare'])[1]"
+                attributes:
+                    id: "storyCard--global__featurecompare"
+
+#comment:
+#need put the correct "data-testid" for testing 
+#=====================================================
+
+			storyCard--global__featurecarriers: 
+                locator:
+                    locator_type: "xpath"
+                    locator_path: "(//section[contains(@class,'storyCard--globalFeature')]//div[@id='storyCard--global__featurecarriers'])[1]"
+                attributes:
+                    id: "storyCard--global__featurecarriers"
+#comment:
+#need put the correct "data-testid" for testing 
+#=====================================================
+
+		storyCard--carrierLogos:
+            carrierLogosTitle:
+                locator:
+                    locator_type: "xpath"
+                    locator_path: "//section[contains(@class,'storyCard--carrierLogos')]//div[@class='storyCard__contentHolder']/h1"
+                attributes:
+                    text: "Coverage Lasts Until the End of 2017!"
+
+#comment:
+#need put the correct "data-testid" for testing 
+#=====================================================
+			
+			availableHealthPlans:
+                locator:
+                    locator_type: "xpath"
+                    locator_path: "//*[@data-testid='availableHealthPlans']"
+                attributes:
+                    text: "A few of the leading carriers and brokers we work with in your state include:"
+
+
+#comment:
+#wron "data-testid" I think is neccesary use something like subtitle
+#=====================================================
+
+			storyCard--sem_Title:
+                locator:
+                    locator_type: "xpath"
+                    locator_path: "//section[contains(@class,'storyCard__Covered')]//h2[@class='storyCard__title storyCard__title--bold']"
+                attributes:
+                    text: "We Have You Covered"
+
+#comment:
+#need put the correct "data-testid" for testing
+#===================================================== 
+
+			smartChoiceSubTitle:
+                locator:
+                    locator_type: "xpath"
+                    locator_path: "(//*[@data-testid='smartChoiceSubTitle'])[1]"
+                attributes:
+                    text: "Finding the right plan can be difficult. Each"
+
+#comment:
+#wron "data-testid" I think is neccesary use something like paragrap or similar
+#is necesary change for a unique element
+#=====================================================
+
+			smartChoiceSubTitlePlansLinks:
+                locator:
+                    locator_type: "xpath"
+                    locator_path: "//*[@data-testid='smartChoiceSubTitle']/a"
+                attributes:
+                    text: "plan"
+
+#comment:
+#need put the correct "data-testid" for testing 
+#=====================================================
+
+            smartChoiceSubTitlePlanBronzePlan:
+                locator:
+                    locator_type: "xpath"
+                    locator_path: "((//*[@data-testid='smartChoiceSubTitle'])[2]/a)[1]"
+                attributes:
+                    text: "Bronze"
+
+#comment:
+#need put the correct "data-testid" for testing
+#is necesary change for a unique element 
+#=====================================================
+
+            smartChoiceSubTitlePlansSilverPlan:
+                locator:
+                    locator_type: "xpath"
+                    locator_path: "((//*[@data-testid='smartChoiceSubTitle'])[2]/a)[2]"
+                attributes:
+                    text: "Silver plan"
+
+#comment:
+#need put the correct "data-testid" for testing
+#is necesary change for a unique element
+#=====================================================                    
+
+            smartChoiceSubTitlePlansGoldPlan:
+                locator:
+                    locator_type: "xpath"
+                    locator_path: "((//*[@data-testid='smartChoiceSubTitle'])[2]/a)[3]"
+                attributes:
+                    text: "Gold"
+
+#comment:
+#need put the correct "data-testid" for testing 
+#is necesary change for a unique element
+#=====================================================
+
+            smartChoiceSubTitlePlansPlatinumPlan:
+                locator:
+                    locator_type: "xpath"
+                    locator_path: "((//*[@data-testid='smartChoiceSubTitle'])[2]/a)[4]"
+                attributes:
+                    text: "Platinum plan"
+
+#comment:
+#need put the correct "data-testid" for testing 
+#is necesary change for a unique element
+#=====================================================
+
+			storyCard__qualify:
+	            storyCard__title--bold:
+	                locator:
+	                    locator_type: "xpath"
+	                    locator_path: "//section[contains(@class,'storyCard__qualify')]//h2[@class='storyCard__title storyCard__title--bold']"
+	                attributes:
+	                    text: "Do I Qualify for a Plan?"
+
+#comment:
+#need put the correct "data-testid" for testing 
+#=====================================================
+
+				smartChoiceSubTitle:
+	                locator:
+	                    locator_type: "xpath"
+	                    locator_path: "(//*[@data-testid='smartChoiceSubTitle'])[3]"
+	                attributes:
+	                    text: "In order to get an Obamacare Plan, you must sign up during"
+
+#comment:
+#wron "data-testid" I think is neccesary use something like paragrap or similar
+#is necesary change for a unique element
+#=====================================================
+
+            smartChoiceSubTitleLinkQualify1:
+                locator:
+                    locator_type: "xpath"
+                    locator_path: "((//*[@data-testid='smartChoiceSubTitle'])[3]/a)[1]"
+                attributes:
+                    text: "Open Enrollment"
+
+#comment:
+#need put the correct "data-testid" for testing 
+#=====================================================               
+
+            smartChoiceSubTitleLinkQualify2:
+                locator:
+                    locator_type: "xpath"
+                    locator_path: "((//*[@data-testid='smartChoiceSubTitle'])[3]/a)[2]"
+                attributes:
+                    text: "Special Enrollment"
+
+#comment:
+#need put the correct "data-testid" for testing 
+#=====================================================
+
+
+            smartChoiceSubTitleLinkIcon1:
+                locator:
+                    locator_type: "xpath"
+                    locator_path: "(//section[contains(@class,'storyCard__qualify')]//div[@class='owl-item active'])[1]"
+                attributes:
+                    text: "Marriage or divorce"
+
+#comment:
+#need put the correct "data-testid" for testing 
+#=====================================================                    
+
+            smartChoiceSubTitleLinkIcon2:
+                locator:
+                    locator_type: "xpath"
+                    locator_path: "(//section[contains(@class,'storyCard__qualify')]//div[@class='owl-item active'])[2]"
+                attributes:
+                    text: "Loss of eligibility"
+
+#comment:
+#need put the correct "data-testid" for testing 
+#=====================================================
+
+            smartChoiceSubTitleLinkIcon3:
+                locator:
+                    locator_type: "xpath"
+                    locator_path: "(//section[contains(@class,'storyCard__qualify')]//div[@class='owl-item active'])[3]"
+                attributes:
+                    text: "Death of a family member"
+
+#comment:
+#need put the correct "data-testid" for testing 
+#=====================================================
+
+            smartChoiceSubTitleLinkIcon4:
+                locator:
+                    locator_type: "xpath"
+                    locator_path: "(//section[contains(@class,'storyCard__qualify')]//div[@class='owl-item active'])[4]"
+                attributes:
+                    text: "Change in Disability status"
+
+#comment:
+#need put the correct "data-testid" for testing 
+#=====================================================
+
+			storyCard--sem_Title:
+                locator:
+                    locator_type: "xpath"
+                    locator_path: "(//section[contains(@class,'storyCard--sem')]//h2[@class='storyCard__title storyCard__title--bold'])[2]"
+                attributes:
+                    text: "About the Affordable Care Act"
+
+#comment:
+#need put the correct "data-testid" for testing 
+#=====================================================
+
+            smartChoiceSubTitle:
+                locator:
+                    locator_type: "xpath"
+                    locator_path: "(//*[@data-testid='smartChoiceSubTitle'])[4]"
+                attributes:
+                    text: "The Affordable Care Act (ACA), also known as..."
+
+#comment:
+#wron "data-testid" I think is neccesary use something like paragrap or similar
+#is necesary change for a unique element
+#=====================================================
+
+			storyCard--sem_common_questions_link:
+                locator:
+                    locator_type: "xpath"
+                    locator_path: "((//section[contains(@class,'storyCard--sem')]//h2[@class='storyCard__title storyCard__title--bold'])[2]/following-sibling::p/a)[1]"
+                attributes:
+                    text: "Obamacare"
+
+#comment:
+#need put the correct "data-testid" for testing 
+#=====================================================               
+
+            storyCard--sem_qualifications_link:
+                locator:
+                    locator_type: "xpath"
+                    locator_path: "((//section[contains(@class,'storyCard--sem')]//h2[@class='storyCard__title storyCard__title--bold'])[2]/following-sibling::p/a)[2]"
+                attributes:
+                    text: "qualifications"
+
+#comment:
+#need put the correct "data-testid" for testing 
+#=====================================================
+
+
+
+
+
+
+
+
+
+
+
+
