@@ -2,13 +2,49 @@
 page:
   lander:
     header:
-      logo:
+      headerLogo:
          locatorType: "id"
          locatorPath: "logo"
       attributes:
           text: "DirectHealthInsurance.com, know your options"
 
-    bigBannerDialog:
+      headerText:
+         locatorType: "xpath"
+         locatorPath: "//*[@id='top']/h2"
+      attributes:
+          text: "Health Insurance Quotes and Information"
+
+
+    bigBanner:
+
+      bigBannerImage:
+        locator:
+          locatorType: "xpath"
+          locatorPath: "//*[@id='bigbanner']/img"
+        attributes:
+          alt: "DirectHealthInsurance.com"
+
+      bigBannerDialogHeader2:
+        locator:
+          locatorType: "xpath"
+          locatorPath: "//*[@id='bigbannerdialog']/h2"
+        attributes:
+          text: "Need Health Insurance? "
+
+      bigBannerDialogHeader3:
+        locator:
+          locatorType: "xpath"
+          locatorPath: "//*[@id='bigbannerdialog']/h3"
+        attributes:
+          text: "Open Enrollment is over, but you may still qualify for coverage."
+
+      bigBannerDialogStrong:
+        locator:
+          locatorType: "xpath"
+          locatorPath: "//*[@id='bigbannerdialog']/strong"
+        attributes:
+          text: "Compare affordable health insurance options now."
+
       bigBannerDialogZipCodeLabel:
         locator:
           locatorType: "id"
@@ -95,6 +131,67 @@ page:
             locatorPath: "//*[@id='carrier_logos']/ul/li[6]/img"
         attributes:
           src: "//images.katch.com/sem/pm/carriers/27.gif"
+
+    information:
+
+      informationSectionHeader:
+        locator:
+          locatorType:  "xpath"
+          locatorPath:  "//*[@id='information']/div[1]/h3"
+        attributes:
+          text: "What information are you asked to see quotes?"
+
+      informationSectionHeaderDescrption:
+        locator:
+          locatorType:  "xpath"
+          locatorPath:  "//*[@id='information']/div[1]/p"
+        attributes:
+          text: "By providing us with a small amount of personal information, like your zip code and age, we are able to show you plans that are the best fit for your personal profile. Depending on your location and health profile, this could include quotes from Blue Cross, Blue Shield, Aetna, UnitedHealthCare, Humana, Cigna, Kaiser (for CA, CO and OH) and others. You may also choose to work with our health insurance agents, who are ready to help with any questions or confusion."
+
+      informationZipCodeImage:
+          locator:
+            locatorType: "xpath"
+            locatorPath: "//*[@id='information']/div[2]/ul/li[1]/img"
+        attributes:
+          src: "//images.katch.com/sem/dhi/get-quotes/v10/images/icon_map.jpg"
+
+      informationZipCodeTitle:
+          locator:
+            locatorType: "xpath"
+            locatorPath: "//*[@id='information']/div[2]/ul/li[1]/h5"
+        attributes:
+          text: "Enter your zip code"
+
+      informationZipCodeDescription:
+          locator:
+            locatorType: "xpath"
+            locatorPath: "//*[@id='information']/div[2]/ul/li[1]/p"
+        attributes:
+          text: "Your zip code will help us determine which insurance carriers operate in your home state."
+
+      informationApplicationInfoImage:
+          locator:
+            locatorType: "xpath"
+            locatorPath: "//*[@id='information']/div[2]/ul/li[1]/img"
+        attributes:
+          src: "//*[@id='information']/div[2]/ul/li[2]/img"
+
+      informationApplicationInfoTitle:
+          locator:
+            locatorType: "xpath"
+            locatorPath: "//*[@id='information']/div[2]/ul/li[2]/h5"
+        attributes:
+          text: "Applicant information"
+
+      informationApplicationInfoDescription:
+          locator:
+            locatorType: "xpath"
+            locatorPath: "//*[@id='information']/div[2]/ul/li[2]/p"
+        attributes:
+          text: "Our quoting system needs to gather applicant information to generate a quote."
+
+
+
 
 #Questions:
 #1. Do we add all elements? If yes, do we add elements without id or any locator type? just like what I did for partners component
