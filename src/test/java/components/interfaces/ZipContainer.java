@@ -7,6 +7,9 @@ public interface ZipContainer {
 
     ZipContainer setZipInput(String zipCode);
     ZipContainer clickZipButton();
+    ZipContainer setApplicantDobMM(String mm);
+    ZipContainer setApplicantDobDD(String dd);
+    ZipContainer setApplicantDobYYYY(String yyyy);
 
 
 
