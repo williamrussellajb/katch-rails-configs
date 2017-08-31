@@ -400,41 +400,41 @@ page:
 #BELOW HERE IS BROKEN, PROBABLY SPACING...
   form:
     c_BiographicalForm:
-##      bf_BirthDateLabel:
-##        locator:
-##          locatorType: "xpath"
-##          locatorPath: "//label[@data-testid='bf_BirthDateLabel']"
-##        attributes:
-##          text: "Birth Date"
-#
-#      bf_ApplicantDobMM:
-#        locator:
-#          locatorType: "xpath"
-#          locatorPath: "//input[@data-testid='bf_ApplicantDobMM']"
-#        attributes:
-#          text:
-#          placeholder: "MM"
-#
-#      bf_ApplicantDobDD:
-#        locator:
-#          locatorType: "xpath"
-#          locatorPath: "//input[@data-testid='bf_ApplicantDobDD']"
-#        attributes:
-#          text:
-#          placeholder: "DD"
-#
-#      bf_ApplicantDobYYYY:
-#        locator:
-#          locatorType: "xpath"
-#          locatorPath: "//input[@data-testid='bf_ApplicantDobYYYY']"
-#        attributes:
-#          text:
-#          placeholder: "YYYY"
+      bf_BirthDateLabel:
+        locator:
+          locatorType: "xpath"
+          locatorPath: "//label[@data-testid='bf_BirthDateLabel']"
+        attributes:
+          text: "Birth Date"
+
+      bf_ApplicantDobMM:
+        locator:
+          locatorType: "xpath"
+          locatorPath: "//input[@data-testid='applicant_dob_mm']"
+        attributes:
+          text:
+          placeholder: "MM"
+
+      bf_ApplicantDobDD:
+        locator:
+          locatorType: "xpath"
+          locatorPath: "//input[@data-testid='applicant_dob_dd']"
+        attributes:
+          text:
+          placeholder: "DD"
+
+      bf_ApplicantDobYYYY:
+        locator:
+          locatorType: "xpath"
+          locatorPath: "//input[@data-testid='applicant_dob_yyyy']"
+        attributes:
+          text:
+          placeholder: "YYYY"
 #
 #      bf_GenderLabel:
 #        locator:
 #          locatorType: "xpath"
-#          locatorPath: "//label[@data-testid='bf_GenderLabel']"
+#          locatorPath: "//label[@data-testid='applicant_dob_dd']"
 #        attributes:
 #          text: "Gender"
 #

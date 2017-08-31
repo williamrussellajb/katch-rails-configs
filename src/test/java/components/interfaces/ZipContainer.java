@@ -8,6 +8,4 @@ public interface ZipContainer {
     ZipContainer setZipInput(String zipCode);
     ZipContainer clickZipButton();
 
-
-
 }
