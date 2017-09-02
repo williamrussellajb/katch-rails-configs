@@ -18,10 +18,18 @@ public class TestLandingToFormPage extends TestTemplate {
 
         //Pages like normal
         LanderPage lp = new LanderPage(driver);
-        FormPage formpage = lp.submitZipCode("91324");
-        sleep(5000);// just to show it working, avoid sleeps.
+        FormPage formPage = lp.submitZipCode("91324");
 
-        formpage.setDOB("06","18", "1992");
+        formPage.setDOB("06","18", "1992");
+        formPage.setBFGender("female");
+        formPage.setTobaccoUser("yes");
+
+        formPage.clickAddSpouseButton();
+        formPage.setSpouseDOB("06","19", "1993");
+        formPage.setBFSpouseGender("female");
+        formPage.setSpouseTobaccoUser("yes");
+
+        sleep(5000);// just to show it working, avoid sleeps.
     }
 
 
