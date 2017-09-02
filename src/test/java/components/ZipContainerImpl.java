@@ -171,15 +171,6 @@ public class ZipContainerImpl extends BasePageObject<ZipContainer> implements Zi
 	@KatchFindBy(locatorPath = "page.fas.filter.provider_type")
 	WebElement provider_type;
 
-	@KatchFindBy(locatorPath = "page.form.c_BiographicalForm.bf_ApplicantDobMM")
-	WebElement bf_ApplicantDobMM;
-
-	@KatchFindBy(locatorPath = "page.form.c_BiographicalForm.bf_ApplicantDobDD")
-	WebElement bf_ApplicantDobDD;
-
-	@KatchFindBy(locatorPath = "page.form.c_BiographicalForm.bf_ApplicantDobYYYY")
-	WebElement bf_ApplicantDobYYYY;
-
 	// TODO Add all elements under the lander in general.yml
 
 	public ZipContainerImpl(WebDriver driver) {
@@ -195,21 +186,6 @@ public class ZipContainerImpl extends BasePageObject<ZipContainer> implements Zi
 	public ZipContainer setZipInput(String zipCode) {
 		// wrap all send text events in this method, we do extra things with it.
 		sendKeys(zipInput, zipCode);
-		return this;
-	}
-
-	public ZipContainer setApplicantDobMM(String mm){
-		sendKeys(bf_ApplicantDobMM, mm);
-		return this;
-	}
-
-	public ZipContainer setApplicantDobDD(String dd){
-		sendKeys(bf_ApplicantDobDD, dd);
-		return this;
-	}
-
-	public ZipContainer setApplicantDobYYYY(String yyyy){
-		sendKeys(bf_ApplicantDobYYYY, yyyy);
 		return this;
 	}
 

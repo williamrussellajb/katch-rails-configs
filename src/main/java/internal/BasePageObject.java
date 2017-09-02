@@ -19,6 +19,7 @@ import org.openqa.selenium.support.ui.FluentWait;
 import org.openqa.selenium.support.ui.Wait;
 import org.testng.SkipException;
 
+import java.util.List;
 import java.util.Objects;
 import java.util.concurrent.TimeUnit;
 
@@ -402,18 +403,17 @@ public class BasePageObject<T> {
     }
 
 
-    T selectCheckbox(WebElement elementKey, boolean shouldSelect) {
-        if (shouldSelect) {
-            if (!getWebElement(elementKey).isSelected()) {
-                elementKey.click();
-            }
-        } else {
-            if (getWebElement(elementKey).isSelected()) {
-                elementKey.click();
+    public T selectRadioButton(List<WebElement> elementKey, String value) {
+        List<WebElement> rb = elementKey;
+        for(int i=0; i < rb.size(); i++) {
+            if (rb.get(i).getAttribute("value").trim().equals(value.trim())){
+                rb.get(i).click();
             }
         }
         return (T) this;
     }
+
+
 
     boolean isElementSelected(WebElement element) {
         return element.isSelected();

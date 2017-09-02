@@ -430,66 +430,197 @@ page:
         attributes:
           text:
           placeholder: "YYYY"
-#
-#      bf_GenderLabel:
+
+      bf_GenderLabel:
+        locator:
+          locatorType: "xpath"
+          locatorPath: "//label[@data-testid='funnelGenderLabel']"
+        attributes:
+          text: "Gender"
+
+      bf_GenderRadioButton:
+        locator:
+          locatorType: "xpath"
+          locatorPath: "//input[@name='applicant_gender']"
+
+      bf_GenderMale:
+        locator:
+          locatorType: "xpath"
+          locatorPath: "//*[@data-testid='funnelGenderMaleRadio']"
+        attributes:
+          text: "Male"
+
+      bf_GenderFemale:
+        locator:
+          locatorType: "xpath"
+          locatorPath: "//*[@data-testid='funnelGenderFemaleRadio']"
+        attributes:
+          text: "Female"
+
+#      bf_GenderMaleText:-- No data id yet
 #        locator:
 #          locatorType: "xpath"
-#          locatorPath: "//label[@data-testid='applicant_dob_dd']"
-#        attributes:
-#          text: "Gender"
-#
-#
-#      bf_GenderFemale:
-#        locator:
-#          locatorType: "xpath"
-#          locatorPath: "//label[@data-testid='bf_GenderFemale']"
-#
-#       bf_GenderMaleText:
-#        locator:
-#          locatorType: "xpath"
-#          locatorPath: "//label[@data-testid='bf_GenderMaleText']"
+#          locatorPath: "//label[@id='applicant_gender_male']"
 #        attributes:
 #          text: "Male"
 #
-#       bf_GenderFemaleText:
+#      bf_GenderFemaleText:-- No data id yet
 #        locator:
 #          locatorType: "xpath"
-#          locatorPath: "//label[@data-testid='bf_GenderFemaleText']"
+#          locatorPath: "//label[@id='applicant_gender_female']"
+#        attributes:
+#          text: "Female"
+
+
+      bf_TobaccoLabel:
+        locator:
+          locatorType: "xpath"
+          locatorPath: "//label[@data-testid='bf_TobaccoLabel']"
+        attributes:
+          text: "Are you a Tobacco User?"
+
+      bf_TobaccoYes:
+        locator:
+          locatorType: "xpath"
+          locatorPath: "//label[@data-testid='funnelTobaccoYesRadio']"
+
+      bf_TobaccoNo:
+        locator:
+          locatorType: "xpath"
+          locatorPath: "//label[@data-testid='funnelTobaccoNoRadio']"
+
+      bf_TobaccoYesText:
+        locator:
+          locatorType: "xpath"
+          locatorPath: "//label[@data-testid='bf_TobaccoYesText']"
+        attributes:
+          text: "Yes"
+
+      bf_TobaccoNoText:
+        locator:
+          locatorType: "xpath"
+          locatorPath: "//label[@data-testid='bf_TobaccoNoText']"
+        attributes:
+          text: "No"
+
+      bf_AddSpouseButton:
+         locator:
+           locatorType: "xpath"
+           locatorPath: "//div[@data-testid='funnelAddSpouseButton']"
+         attributes:
+           text: "+ Add Spouse"
+
+      bf_SpouseBirthDateLabel:
+        locator:
+          locatorType: "xpath"
+          locatorPath: "//label[@data-testid='funnelSpouseBirthDateLabel']"
+        attributes:
+          text: "Birth Date"
+
+      bf_SpouseApplicantDobMM:
+        locator:
+          locatorType: "xpath"
+          locatorPath: "//input[@data-testid='spouse_dob_mm']"
+        attributes:
+          text:
+          placeholder: "MM"
+
+      bf_SpouseApplicantDobDD:
+        locator:
+          locatorType: "xpath"
+          locatorPath: "//input[@data-testid='spouse_dob_dd']"
+        attributes:
+          text:
+          placeholder: "DD"
+
+      bf_SpouseApplicantDobYYYY:
+        locator:
+          locatorType: "xpath"
+          locatorPath: "//input[@data-testid='spouse_dob_yyyy']"
+        attributes:
+          text:
+          placeholder: "YYYY"
+
+      bf_SpouseGenderLabel:
+        locator:
+          locatorType: "xpath"
+          locatorPath: "//label[@data-testid='funnelSpouseGenderLabel']"
+        attributes:
+          text: "Gender"
+
+      bf_SpouseGenderRadioButton:
+        locator:
+          locatorType: "xpath"
+          locatorPath: "//input[@name='applicant_gender']"
+
+      bf_SpouseGenderMale:
+        locator:
+          locatorType: "xpath"
+          locatorPath: "//*[@data-testid='funnelSpouseGenderMaleRadio']"
+        attributes:
+          text: "Male"
+
+      bf_SpouseGenderFemale:
+        locator:
+          locatorType: "xpath"
+          locatorPath: "//*[@data-testid='funnelSpouseGenderFemaleRadio']"
+        attributes:
+          text: "Female"
+
+#      bf_SpouseGenderMaleText:-- No data id yet
+#        locator:
+#          locatorType: "xpath"
+#          locatorPath: "//label[@id='applicant_gender_male']"
 #        attributes:
 #          text: "Male"
 #
-#
-#      bf_TobaccoLabel:
+#      bf_SpouseGenderFemaleText:-- No data id yet
 #        locator:
 #          locatorType: "xpath"
-#          locatorPath: "//label[@data-testid='bf_TobaccoLabel']"
+#          locatorPath: "//label[@id='applicant_gender_female']"
 #        attributes:
-#          text: "Are you a Tobacco User?"
+#          text: "DFmale"
+
+
+      bf_SpouseTobaccoLabel:
+        locator:
+          locatorType: "xpath"
+          locatorPath: "//label[@data-testid='funnelSpouseTobaccoUser']"
+        attributes:
+          text: "Are you a Tobacco User?"
+
+      bf_SpouseTobaccoYes:
+        locator:
+          locatorType: "xpath"
+          locatorPath: "//label[@data-testid='funnelSpouseTobaccoYesRadio']"
+
+      bf_SpouseTobaccoNo:
+        locator:
+          locatorType: "xpath"
+          locatorPath: "//label[@data-testid='funnelSpouseTobaccoNoRadio']"
 #
-#      bf_TobaccoYes:
-#        locator:
-#          locatorType: "xpath"
-#          locatorPath: "//label[@data-testid='bf_TobaccoYes']"
-#
-#      bf_TobaccoNo:
-#        locator:
-#          locatorType: "xpath"
-#          locatorPath: "//label[@data-testid='bf_TobaccoNo']"
-#
-#      bf_TobaccoYesText:
+#      bf_SpouseTobaccoYesText: -- No data id yet
 #        locator:
 #          locatorType: "xpath"
 #          locatorPath: "//label[@data-testid='bf_TobaccoYesText']"
 #        attributes:
 #          text: "Yes"
 #
-#      bf_TobaccoNoText:
+#      bf_SpouseTobaccoNoText: -- No data id yet
 #        locator:
 #          locatorType: "xpath"
 #          locatorPath: "//label[@data-testid='bf_TobaccoNoText']"
 #        attributes:
 #          text: "No"
-#
+
+       bf_AddDependentSpouseButton:
+         locator:
+           locatorType: "xpath"
+           locatorPath: "//label[@data-testid='funnelAddSpouseButton']"
+         attributes:
+           text: "+ Add Spouse"
+
+
 #      bf_AdoptingPregnantLabel:
 #        locator:
 #          locatorType: "xpath"

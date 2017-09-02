@@ -1,11 +1,8 @@
 package pages;
 
 import components.interfaces.FormContainer;
-import components.interfaces.ZipContainer;
 import factory.FormFactory;
-import factory.ZipFactory;
 import internal.BasePageObject;
-import internal.TabUtils;
 import org.openqa.selenium.WebDriver;
 
 /**
@@ -25,4 +22,29 @@ public class FormPage extends BasePageObject<FormPage>{
         fc.setApplicantDobYYYY(yyyy);
     }
 
+    public void setBFGender(String value){
+        fc.setBFGender(value);
+    }
+
+    public void setTobaccoUser(String answer){
+        fc.setTobaccoUser(answer);
+    }
+
+    public void clickAddSpouseButton(){
+        fc.clickAddSpouseButton();
+    }
+
+    public void setSpouseDOB(String mm, String dd, String yyyy){
+        fc.setSpouseApplicantDobDD(dd);
+        fc.setSpouseApplicantDobMM(mm);
+        fc.setSpouseApplicantDobYYYY(yyyy);
+    }
+
+    public void setBFSpouseGender(String value){
+        fc.setSpouseBFGender(value);
+    }
+
+    public void setSpouseTobaccoUser(String answer){
+        fc.setSpouseTobaccoUser(answer);
+    }
 }
