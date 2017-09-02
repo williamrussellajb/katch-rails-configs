@@ -613,7 +613,7 @@ page:
 #        attributes:
 #          text: "No"
 
-       bf_AddDependentSpouseButton:
+      bf_AddDependentButton:
          locator:
            locatorType: "xpath"
            locatorPath: "//label[@data-testid='funnelAddSpouseButton']"
