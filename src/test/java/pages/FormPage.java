@@ -47,4 +47,30 @@ public class FormPage extends BasePageObject<FormPage>{
     public void setSpouseTobaccoUser(String answer){
         fc.setSpouseTobaccoUser(answer);
     }
+
+    public void clickAddDependentButton(){
+        fc.clickAddDependentButton();
+    }
+
+    public void setDependentDOB(String mm, String dd, String yyyy){
+        fc.setDependentApplicantDobDD(dd);
+        fc.setDependentApplicantDobMM(mm);
+        fc.setDependentApplicantDobYYYY(yyyy);
+    }
+
+    public void setBFDependentGender(String value){
+        fc.setDependentBFGender(value);
+    }
+
+    public void setDependentTobaccoUser(String answer){
+        fc.setDependentTobaccoUser(answer);
+    }
+
+    public void clickNextStep1(){
+        fc.clickNextStep1();
+    }
+
+    public void clickBackStep1(){
+        fc.clickBackStep1();
+    }
 }

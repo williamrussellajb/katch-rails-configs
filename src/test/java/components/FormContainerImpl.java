@@ -96,6 +96,54 @@ public class FormContainerImpl extends BasePageObject<FormContainer> implements 
 //    @KatchFindBy(locatorPath = "page.form.c_BiographicalForm.bf_SpouseTobaccoNoText")
 //    WebElement bf_SpouseTobaccoNoText;
 
+    @KatchFindBy(locatorPath = "page.form.c_BiographicalForm.bf_AddDependentButton")
+    WebElement bf_AddDependentButton;
+
+
+    @KatchFindBy(locatorPath = "page.form.c_BiographicalForm.bf_DependentApplicantDobMM")
+    WebElement bf_DependentApplicantDobMM;
+
+    @KatchFindBy(locatorPath = "page.form.c_BiographicalForm.bf_DependentApplicantDobDD")
+    WebElement bf_DependentApplicantDobDD;
+
+    @KatchFindBy(locatorPath = "page.form.c_BiographicalForm.bf_DependentApplicantDobYYYY")
+    WebElement bf_DependentApplicantDobYYYY;
+
+    @KatchFindBy(locatorPath = "page.form.c_BiographicalForm.bf_DependentGenderLabel")
+    WebElement bf_DependentGenderLabel;
+
+    @KatchFindBy(locatorPath = "page.form.c_BiographicalForm.bf_DependentGenderRadioButton")
+    List<WebElement> bf_DependentGenderRadioButton;
+
+    @KatchFindBy(locatorPath = "page.form.c_BiographicalForm.bf_DependentGenderMale")
+    WebElement bf_DependentGenderMale;
+
+    @KatchFindBy(locatorPath = "page.form.c_BiographicalForm.bf_DependentGenderFemale")
+    WebElement bf_DependentGenderFemale;
+
+//    @KatchFindBy(locatorPath = "page.form.c_BiographicalForm.bf_DependentGenderMaleText")
+//    WebElement bf_DependentGenderMaleText;
+//
+//    @KatchFindBy(locatorPath = "page.form.c_BiographicalForm.bf_DependentGenderFemaleText")
+//    WebElement bf_DependentGenderFemaleText;
+
+    @KatchFindBy(locatorPath = "page.form.c_BiographicalForm.bf_DependentTobaccoYes")
+    WebElement bf_DependentTobaccoYes;
+
+    @KatchFindBy(locatorPath = "page.form.c_BiographicalForm.bf_DependentTobaccoNo")
+    WebElement bf_DependentTobaccoNo;
+
+//    @KatchFindBy(locatorPath = "page.form.c_BiographicalForm.bf_DependentTobaccoYesText")
+//    WebElement bf_DependentTobaccoYesText;
+//
+//    @KatchFindBy(locatorPath = "page.form.c_BiographicalForm.bf_DependentTobaccoNoText")
+//    WebElement bf_DependentTobaccoNoText;
+
+    @KatchFindBy(locatorPath = "page.form.c_BiographicalForm.next_button_step_1")
+    WebElement next_button_step_1;
+
+    @KatchFindBy(locatorPath = "page.form.c_BiographicalForm.back_button_step_1")
+    WebElement back_button_step_1;
 
     // TODO Add all elements under the lander in general.yml
 
@@ -171,6 +219,54 @@ public class FormContainerImpl extends BasePageObject<FormContainer> implements 
         } else {
             clickElement(bf_SpouseTobaccoNo);
         }
+        return this;
+    }
+
+    public FormContainer clickAddDependentButton() {
+        clickElement(bf_AddDependentButton);
+        return this;
+    }
+
+    public FormContainer setDependentApplicantDobMM(String mm) {
+        sendKeys(bf_DependentApplicantDobMM, mm);
+        return this;
+    }
+
+    public FormContainer setDependentApplicantDobDD(String dd) {
+        sendKeys(bf_DependentApplicantDobDD, dd);
+        return this;
+    }
+
+    public FormContainer setDependentApplicantDobYYYY(String yyyy) {
+        sendKeys(bf_DependentApplicantDobYYYY, yyyy);
+        return this;
+    }
+
+    public FormContainer setDependentBFGender(String gender) {
+        if (gender.trim().toLowerCase().equals("female")) {
+            clickElement(bf_DependentGenderFemale);
+        } else {
+            clickElement(bf_DependentGenderMale);
+        }
+        return this;
+    }
+
+    public FormContainer setDependentTobaccoUser(String answer) {
+        if (answer.trim().toLowerCase().equals("yes")) {
+            clickElement(bf_DependentTobaccoYes);
+        } else {
+            clickElement(bf_DependentTobaccoNo);
+        }
+        return this;
+    }
+
+    public FormContainer clickNextStep1() {
+        clickElement(next_button_step_1);
+        return this;
+    }
+
+    public FormContainer clickBackStep1() {
+        clickElement(back_button_step_1);
         return this;
     }
 }

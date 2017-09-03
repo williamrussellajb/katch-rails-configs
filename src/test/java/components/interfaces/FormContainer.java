@@ -17,4 +17,15 @@ public interface FormContainer {
     FormContainer setSpouseBFGender(String value);
     FormContainer setSpouseTobaccoUser(String answer);
     FormContainer clickAddSpouseButton();
+
+    FormContainer setDependentApplicantDobMM(String mm);
+    FormContainer setDependentApplicantDobDD(String dd);
+    FormContainer setDependentApplicantDobYYYY(String yyyy);
+    FormContainer setDependentBFGender(String value);
+    FormContainer setDependentTobaccoUser(String answer);
+    FormContainer clickAddDependentButton();
+
+    FormContainer clickNextStep1();
+    FormContainer clickBackStep1();
 }
+
