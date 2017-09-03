@@ -29,6 +29,13 @@ public class TestLandingToFormPage extends TestTemplate {
         formPage.setBFSpouseGender("female");
         formPage.setSpouseTobaccoUser("yes");
 
+        formPage.clickAddDependentButton();
+        formPage.setDependentDOB("06","19", "2014");
+        formPage.setBFDependentGender("male");
+        formPage.setDependentTobaccoUser("no");
+
+        formPage.clickNextStep1();
+
         sleep(5000);// just to show it working, avoid sleeps.
     }
 

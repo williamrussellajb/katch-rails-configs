@@ -616,9 +616,112 @@ page:
       bf_AddDependentButton:
          locator:
            locatorType: "xpath"
-           locatorPath: "//label[@data-testid='funnelAddSpouseButton']"
+           locatorPath: "//div[@data-testid='funnelAddDependent']"
          attributes:
-           text: "+ Add Spouse"
+           text: "+ Add Dependent"
+
+      bf_DependentBirthDateLabel:
+        locator:
+          locatorType: "xpath"
+          locatorPath: "//label[@data-testid='funnelDependentBirthDateLabel1']"
+        attributes:
+          text: "Birth Date"
+
+      bf_DependentApplicantDobMM:
+        locator:
+          locatorType: "xpath"
+          locatorPath: "//input[@data-testid='child_1_dob_mm']"
+        attributes:
+          text:
+          placeholder: "MM"
+
+      bf_DependentApplicantDobDD:
+        locator:
+          locatorType: "xpath"
+          locatorPath: "//input[@data-testid='child_1_dob_dd']"
+        attributes:
+          text:
+          placeholder: "DD"
+
+      bf_DependentApplicantDobYYYY:
+        locator:
+          locatorType: "xpath"
+          locatorPath: "//input[@data-testid='child_1_dob_yyyy']"
+        attributes:
+          text:
+          placeholder: "YYYY"
+
+      bf_DependentGenderLabel:
+        locator:
+          locatorType: "xpath"
+          locatorPath: "//label[@data-testid='funnelDependentGenderLabel1']"
+        attributes:
+          text: "Gender"
+
+      bf_DependentGenderRadioButton:
+        locator:
+          locatorType: "xpath"
+          locatorPath: "//input[@name='applicant_gender']"
+
+      bf_DependentGenderMale:
+        locator:
+          locatorType: "xpath"
+          locatorPath: "//*[@data-testid='funnelDependentGenderMaleRadio1']"
+        attributes:
+          text: "Male"
+
+      bf_DependentGenderFemale:
+        locator:
+          locatorType: "xpath"
+          locatorPath: "//*[@data-testid='funnelDependentGenderFemaleRadio1']"
+        attributes:
+          text: "Female"
+
+#      bf_DependentGenderMaleText:-- No data id yet
+#        locator:
+#          locatorType: "xpath"
+#          locatorPath: "//label[@id='applicant_gender_male']"
+#        attributes:
+#          text: "Male"
+#
+#      bf_DependentGenderFemaleText:-- No data id yet
+#        locator:
+#          locatorType: "xpath"
+#          locatorPath: "//label[@id='applicant_gender_female']"
+#        attributes:
+#          text: "DFmale"
+
+
+      bf_DependentTobaccoLabel:
+        locator:
+          locatorType: "xpath"
+          locatorPath: "//label[@data-testid='funnelDependentTobaccoUser']"
+        attributes:
+          text: "Are you a Tobacco User?"
+
+      bf_DependentTobaccoYes:
+        locator:
+          locatorType: "xpath"
+          locatorPath: "//label[@data-testid='funnelDependentTobaccoYesRadio1']"
+
+      bf_DependentTobaccoNo:
+        locator:
+          locatorType: "xpath"
+          locatorPath: "//label[@data-testid='funnelDependentTobaccoNoRadio1']"
+#
+#      bf_DependentTobaccoYesText: -- No data id yet
+#        locator:
+#          locatorType: "xpath"
+#          locatorPath: "//label[@data-testid='bf_TobaccoYesText']"
+#        attributes:
+#          text: "Yes"
+#
+#      bf_DependentTobaccoNoText: -- No data id yet
+#        locator:
+#          locatorType: "xpath"
+#          locatorPath: "//label[@data-testid='bf_TobaccoNoText']"
+#        attributes:
+#          text: "No"
 
 
 #      bf_AdoptingPregnantLabel:
@@ -666,19 +769,34 @@ page:
 #        attributes:
 #          text: "No"
 #
+      next_button_step_1:
+        locator:
+          locatorType: "xpath"
+          locatorPath: ".//div[contains(@data-step,'1')]//*[contains(@data-testid, 'nextButton')]"
+        attributes:
+          text: "Next »"
+
+      back_button_step_1:
+        locator:
+          locatorType: "xpath"
+          locatorPath: ".//div[contains(@data-step,'1')]//*[contains(@data-testid, 'backButton')]"
+        attributes:
+          text: "« Back"
+
+
 #      next_button_step_1:
 #        locator:
 #          locatorType: "xpath"
-#          locatorPath: ".//div[contains(@data-step,'1')]//*[contains(@data-testid, 'nextButton')]"
+#          locatorPath: "//button[@data-testid='nextButton']"
 #        attributes:
 #          text: "Next »"
 #
 #      back_button_step_1:
 #        locator:
 #          locatorType: "xpath"
-#          locatorPath: ".//div[contains(@data-step,'1')]//*[contains(@data-testid, 'backButton')]"
+#          locatorPath: "//button[@data-testid='backButton']"
 #        attributes:
-#          text: ""
+#          text: "« Back"
 #
 #    ####################
 #    # Health Condition #
