@@ -183,10 +183,33 @@ public class ZipContainerImpl extends BasePageObject<ZipContainer> implements Zi
 		return this;
 	}
 
+	public ZipContainer clickLMBasicIcon() {
+		// wrap all click events in this method, we do extra things with it.
+		clickElement(lm_BasicsIcon);
+		return this;
+	}
+
+	public ZipContainer clickLMDiscountIcon() {
+		// wrap all click events in this method, we do extra things with it.
+		clickElement(lm_DiscountIcon);
+		return this;
+	}
+
+	public ZipContainer clickLMACAIcon() {
+		// wrap all click events in this method, we do extra things with it.
+		clickElement(lm_ACAIcon);
+		return this;
+	}
+
+	public ZipContainer clickLMMedicareIcon() {
+		// wrap all click events in this method, we do extra things with it.
+		clickElement(lm_MedicareIcon);
+		return this;
+	}
+
 	public ZipContainer setZipInput(String zipCode) {
 		// wrap all send text events in this method, we do extra things with it.
 		sendKeys(zipInput, zipCode);
 		return this;
 	}
-
 }
