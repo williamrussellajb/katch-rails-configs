@@ -9,18 +9,18 @@ import org.testng.annotations.BeforeMethod;
  */
 public class TestTemplate {
 
-    protected WebDriver driver;
+	protected WebDriver driver;
 
-    @BeforeMethod
-    public void setupDriver(){
-        this.driver = BaseDriver.getDriver();
-    }
+	@BeforeMethod
+	public void setupDriver() {
+		this.driver = BaseDriver.getDriver();
+	}
 
-    @AfterMethod
-    public void destroyDriver(){
-        if(null != driver){
-            driver.quit();
-        }
-    }
+	@AfterMethod
+	public void destroyDriver() {
+		if (null != driver) {
+			driver.quit();
+		}
+	}
 
 }

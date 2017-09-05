@@ -5,7 +5,17 @@ package components.interfaces;
  */
 public interface ZipContainer {
 
-    ZipContainer setZipInput(String zipCode);
-    ZipContainer clickZipButton();
+	ZipContainer setZipInput(String zipCode);
 
+	ZipContainer clickZipButton();
+
+	ZipContainer clickFooterShopLink();
+
+	ZipContainer clickFooterContactLink();
+
+	ZipContainer clickFooterAboutLink();
+
+	ZipContainer clickFooterPrivacyPolicyMobileSEM();
+
+	ZipContainer clickFooterTermsMobileSEM();
 }

@@ -371,6 +371,42 @@ page:
         attributes:
           link: "/dreamplans/img/home/yahoo.png"
 
+    globalFooter__topContainer:
+      gf_footerShopLink:
+        locator:
+          locatorType: "xpath"
+          locatorPath: "//*[@data-testid='footerShopLink']"
+        attributes:
+          text: "SHOP"
+
+      gf_footerAboutLink:
+        locator:
+          locatorType: "xpath"
+          locatorPath: "//*[@data-testid='footerAboutLink']"
+        attributes:
+          text: "ABOUT"
+
+      gf_footerContactLink:
+        locator:
+          locatorType: "xpath"
+          locatorPath: "//*[@data-testid='footerShopLink']"
+        attributes:
+          text: "CONTACT"
+
+      gf_footerPrivacyPolicyMobileSEM:
+        locator:
+          locatorType: "xpath"
+          locatorPath: "//*[@data-testid='footerPrivacyPolicyMobileSEM']"
+        attributes:
+          text: "Privacy Policy"
+
+      gf_footerTermsMobileSEM:
+        locator:
+          locatorType: "xpath"
+          locatorPath: "//*[@data-testid='footerTermsMobileSEM']"
+        attributes:
+          text: "Terms of Use"
+
 
 
 ####################################

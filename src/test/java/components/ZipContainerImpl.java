@@ -171,6 +171,21 @@ public class ZipContainerImpl extends BasePageObject<ZipContainer> implements Zi
 	@KatchFindBy(locatorPath = "page.fas.filter.provider_type")
 	WebElement provider_type;
 
+	@KatchFindBy(locatorPath = "page.lander.globalFooter__topContainer.gf_footerShopLink")
+	WebElement gf_footerShopLink;
+
+	@KatchFindBy(locatorPath = "page.lander.globalFooter__topContainer.gf_footerAboutLink")
+	WebElement gf_footerAboutLink;
+
+	@KatchFindBy(locatorPath = "page.lander.globalFooter__topContainer.gf_footerContactLink")
+	WebElement gf_footerContactLink;
+
+	@KatchFindBy(locatorPath = "page.lander.globalFooter__topContainer.gf_footerPrivacyPolicyMobileSEM")
+	WebElement gf_footerPrivacyPolicyMobileSEM;
+
+	@KatchFindBy(locatorPath = "page.lander.globalFooter__topContainer.gf_footerTermsMobileSEM")
+	WebElement gf_footerTermsMobileSEM;
+
 	// TODO Add all elements under the lander in general.yml
 
 	public ZipContainerImpl(WebDriver driver) {
@@ -189,4 +204,28 @@ public class ZipContainerImpl extends BasePageObject<ZipContainer> implements Zi
 		return this;
 	}
 
+	public ZipContainer clickFooterShopLink() {
+		clickElement(gf_footerShopLink);
+		return this;
+	}
+
+	public ZipContainer clickFooterContactLink() {
+		clickElement(gf_footerContactLink);
+		return this;
+	}
+
+	public ZipContainer clickFooterAboutLink() {
+		clickElement(gf_footerAboutLink);
+		return this;
+	}
+
+	public ZipContainer clickFooterPrivacyPolicyMobileSEM() {
+		clickElement(gf_footerPrivacyPolicyMobileSEM);
+		return this;
+	}
+
+	public ZipContainer clickFooterTermsMobileSEM() {
+		clickElement(gf_footerTermsMobileSEM);
+		return this;
+	}
 }
