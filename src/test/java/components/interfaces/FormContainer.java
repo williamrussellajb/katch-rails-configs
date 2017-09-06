@@ -1,5 +1,7 @@
 package components.interfaces;
 
+import pages.QLEFormPage;
+
 /**
  * Created by william.russell on 8/28/17.
  */

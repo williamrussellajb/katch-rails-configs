@@ -837,91 +837,91 @@ page:
 #    ##############
 #    #  QLE FORM  #
 #    ##############
-#    c_QleForm:
-#      qle_none_apply:
-#        locator:
-#          locatorType: "id"
-#          locatorPath: "qle_none_apply"
-#        attributes:
-#          text: "None apply. Get coverage anyway."
-#
-#      qle_lost_coverage:
-#        locator:
-#          locatorType: "id"
-#          locatorPath: "qle_lost_coverage"
-#        attributes:
-#          text: "Lost Coverage"
-#
-#      qle_got_married:
-#        locator:
-#          locatorType: "id"
-#          locatorPath: "qle_got_married"
-#        attributes:
-#          text: "Marriage"
-#
-#      qle_new_job:
-#        locator:
-#          locatorType: "id"
-#          locatorPath: "qle_new_job"
-#        attributes:
-#          text: "New Job"
-#
-#      qle_had_baby:
-#        locator:
-#          locatorType: "id"
-#          locatorPath: "qle_had_baby"
-#        attributes:
-#          text: "New Child"
-#
-#      qle_moved_another_state:
-#        locator:
-#          locatorType: "id"
-#          locatorPath: "qle_moved_another_state"
-#        attributes:
-#          text: "Moved States"
-#
-#      qle_got_divorced:
-#        locator:
-#          locatorType: "id"
-#          locatorPath: "qle_got_divorced"
-#        attributes:
-#          text: "Divorce"
-#
-#      qle_lost_job:
-#        locator:
-#          locatorType: "id"
-#          locatorPath: "qle_lost_job"
-#        attributes:
-#          text: "Lost Job"
-#
-#      qle_member_family_died:
-#        locator:
-#          locatorType: "id"
-#          locatorPath: "qle_member_family_died"
-#        attributes:
-#          text: "Death in Family"
-#
-#      qle_event_date_mm:
-#        locator:
-#          locatorType: "id"
-#          locatorPath: "date_qle_mm"
-#        attributes:
-#          placeholder: "MM"
-#
-#      qle_event_date_dd:
-#        locator:
-#          locatorType: "id"
-#          locatorPath: "date_qle_dd"
-#        attributes:
-#          placeholder: "dd"
-#
-#      qle_event_date_yyyy:
-#        locator:
-#          locatorType: "id"
-#          locatorPath: "date_qle_yyyy"
-#        attributes:
-#          placeholder: "YYY"
-#
+    c_QleForm:
+      qle_none_apply:
+        locator:
+          locatorType: "xpath"
+          locatorPath: "//input[@id='qle_none_apply']"
+        attributes:
+          text: "None apply. Get coverage anyway."
+
+      qle_lost_coverage:
+        locator:
+          locatorType: "xpath"
+          locatorPath: "//input[@id='qle_lost_coverage']"
+        attributes:
+          text: "Lost Coverage"
+
+      qle_got_married:
+        locator:
+          locatorType: "xpath"
+          locatorPath: "//input[@id='qle_got_married']"
+        attributes:
+          text: "Marriage"
+
+      qle_new_job:
+        locator:
+          locatorType: "xpath"
+          locatorPath: "//input[@id='qle_new_job']"
+        attributes:
+          text: "New Job"
+
+      qle_had_baby:
+        locator:
+          locatorType: "xpath"
+          locatorPath: "//input[@id='qle_had_baby']"
+        attributes:
+          text: "New Child"
+
+      qle_moved_another_state:
+        locator:
+          locatorType: "xpath"
+          locatorPath: "//input[@id='qle_moved_another_state']"
+        attributes:
+          text: "Moved States"
+
+      qle_got_divorced:
+        locator:
+          locatorType: "xpath"
+          locatorPath: "//input[@id='qle_got_divorced']"
+        attributes:
+          text: "Divorce"
+
+      qle_lost_job:
+        locator:
+          locatorType: "xpath"
+          locatorPath: "//input[@id='qle_lost_job']"
+        attributes:
+          text: "Lost Job"
+
+      qle_member_family_died:
+        locator:
+          locatorType: "xpath"
+          locatorPath: "//input[@id='qle_member_family_died']"
+        attributes:
+          text: "Death in Family"
+
+      qle_event_date_mm:
+        locator:
+          locatorType: "id"
+          locatorPath: "date_qle_mm"
+        attributes:
+          placeholder: "MM"
+
+      qle_event_date_dd:
+        locator:
+          locatorType: "id"
+          locatorPath: "date_qle_dd"
+        attributes:
+          placeholder: "dd"
+
+      qle_event_date_yyyy:
+        locator:
+          locatorType: "id"
+          locatorPath: "date_qle_yyyy"
+        attributes:
+          placeholder: "YYY"
+
 #      qf_DateMM:
 #	    locator:
 #		  locatorType: "xpath"
@@ -956,8 +956,8 @@ page:
 #          locatorPath: ".//div[contains(@data-step,'2')]//button[@data-testid='seeRates']"
 #        attributes:
 #          text: "??"
-#
-#
+
+
 #    c_SpouseForm:
 #
 #      sf_Label:

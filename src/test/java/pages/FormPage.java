@@ -1,6 +1,7 @@
 package pages;
 
 import components.interfaces.FormContainer;
+import components.interfaces.QLEFormContainer;
 import factory.FormFactory;
 import internal.BasePageObject;
 import org.openqa.selenium.WebDriver;
@@ -66,8 +67,9 @@ public class FormPage extends BasePageObject<FormPage>{
         fc.setDependentTobaccoUser(answer);
     }
 
-    public void clickNextStep1(){
+    public QLEFormPage clickNextStep1(){
         fc.clickNextStep1();
+        return new QLEFormPage(driver);
     }
 
     public void clickBackStep1(){

@@ -1,10 +1,12 @@
 package components;
 
 import components.interfaces.FormContainer;
+import components.interfaces.QLEFormContainer;
 import core.KatchFindBy;
 import internal.BasePageObject;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import pages.QLEFormPage;
 
 import java.util.List;
 

@@ -4,6 +4,7 @@ import internal.TestTemplate;
 import org.testng.annotations.Test;
 import pages.FormPage;
 import pages.LanderPage;
+import pages.QLEFormPage;
 
 /**
  * Created by william.russell on 8/28/17.
@@ -33,8 +34,19 @@ public class TestLandingToFormPage extends TestTemplate {
         formPage.setDependentDOB("06","19", "2014");
         formPage.setBFDependentGender("male");
         formPage.setDependentTobaccoUser("no");
+        QLEFormPage qleFormPage = formPage.clickNextStep1();
 
-        formPage.clickNextStep1();
+        sleep(1000);// just to show it working, avoid sleeps.
+
+        qleFormPage.clickQLENoneApply();
+        qleFormPage.clickQLELostCoverage();
+        qleFormPage.clickQLEGotMarried();
+        qleFormPage.clickQLENewJob();
+        qleFormPage.clickQLEHadBaby();
+        qleFormPage.clickQLEMovedAnotherState();
+        qleFormPage.clickQLEGotDivorced();
+        qleFormPage.clickQLELostJob();
+        qleFormPage.clickQLEMemberFamilyDied();
 
         sleep(5000);// just to show it working, avoid sleeps.
     }
